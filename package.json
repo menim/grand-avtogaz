@@ -1,0 +1,38 @@
+{
+  "name": "grand-avtogaz",
+  "version": "1.0.0",
+  "description": "website of grand-avtogaz magazine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menim/grand-avtogaz.git"
+  },
+  "author": "Anatoliy <mel198629@gmail.com> (http://artoko.org)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-cache": "^0.4.6",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-imageoptim": "^1.0.9",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^2.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/menim/grand-avtogaz/issues"
+  },
+  "homepage": "https://github.com/menim/grand-avtogaz#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}
