@@ -1,0 +1,28 @@
+.link {
+  color: $white;
+  font-size: 0.875rem;
+  font-family: OpenSansBold, sans-serif;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 0.643em 0;
+
+  &::after {
+    content: '';
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0.358em;
+    width: 1.858em;
+    transition: background-color 300ms ease-in;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $cinnabar;
+    }
+  }
+}

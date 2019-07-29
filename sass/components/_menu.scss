@@ -1,0 +1,17 @@
+.menu {
+  font-size: 0.875rem;
+  font-family: OpenSansBold, sans-serif;
+  margin: 0;
+  padding-left: 0;
+
+  &__item {
+    list-style-type: none;
+    display: inline-block;
+    color: $white;
+    margin-left: 2.143em;
+
+    &::first-child {
+      margin-left: none;
+    }
+  }
+}
