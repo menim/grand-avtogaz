@@ -1,0 +1,14 @@
+.logo {
+  color: $white;
+  display: flex;
+  font-size: 0.8125rem;
+  line-height: 1.38;
+  text-decoration: none;
+
+  &__img {
+    display: inline-block;
+    height: 35px;
+    width: 160px;
+    padding-right: 2.3em;
+  }
+}
