@@ -82,7 +82,7 @@ gulp.task ('useref', function () {
 gulp.task ('browserSync', function () {
   browserSync.init ({
     server: {
-      baseDir: 'grand-avtogaz',
+      baseDir: '../grand-avtogaz',
     },
   });
 });
