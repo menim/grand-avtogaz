@@ -1,4 +1,6 @@
 .inner-wrapper {
+  display: flex;
+  align-items: center;
   height: 100px;
   background-color: $outer-space;
 }
