@@ -1,0 +1,17 @@
+.gbo-brands {
+  font-size: 1rem;
+
+  &__description {
+    margin-bottom: 6.5625em;
+  }
+
+  &__item {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 5em;
+
+    &:nth-last-child(-n + 4) {
+      margin-bottom: 0;
+    }
+  }
+}
