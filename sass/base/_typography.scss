@@ -5,6 +5,7 @@
   'normal',
   woff2 woff
 );
+
 @include font-face(
   'OpenSansBold',
   '../fonts/opensans-bold',
@@ -15,4 +16,8 @@
 
 body {
   font-family: OpenSans, sans-serif;
+}
+
+strong {
+  font-family: OpenSansBold;
 }
