@@ -1,0 +1,30 @@
+.gbo-offer {
+  background-color: $mystic;
+  position: relative;
+  font-size: 1rem;
+
+  &__description {
+    margin-bottom: 7.5em;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &::before {
+    background: url('../../img/repair-1.png') no-repeat;
+    background-position: 0 3.75em;
+  }
+
+  &::after {
+    background: url('../../img/repair-2.png') no-repeat;
+    background-position: 100% 11.875em;
+  }
+}
