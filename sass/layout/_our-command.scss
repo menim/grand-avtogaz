@@ -1,0 +1,13 @@
+.our-command {
+  background-color: $outer-space;
+  font-size: 1em;
+
+  &__description {
+    margin-bottom: 5.3125em;
+    margin-left: 15px;
+  }
+
+  &__photo {
+    margin-bottom: 6.5625em;
+  }
+}
