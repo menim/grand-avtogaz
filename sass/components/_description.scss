@@ -1,0 +1,13 @@
+.description {
+  font-size: 1rem;
+  border-left: 0.5em solid $cinnabar;
+  padding-left: 3.75em;
+
+  &--dark {
+    border-color: $outer-space;
+  }
+
+  &--lg-indent {
+    padding-left: 4.5em;
+  }
+}
