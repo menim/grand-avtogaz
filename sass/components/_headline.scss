@@ -8,20 +8,24 @@
     font-family: OpenSans;
   }
 
+  &__normal {
+    font-family: OpenSans;
+    font-weight: normal;
+  }
+
   &--sm {
     font-family: OpenSans;
-    font-size: 2.25em;
+    font-size: 2.25rem;
+    font-weight: normal;
     margin-bottom: 0.83em;
   }
 
   &--md {
-    font-size: 3.125em;
-    margin-bottom: 1.6em;
-    line-height: 1;
+    font-size: 3.125rem;
   }
 
   &--lg {
-    font-size: 3.75em;
+    font-size: 3.75rem;
     line-height: 1.22;
     padding: 3.083em 0;
   }
@@ -32,5 +36,9 @@
 
   &--inverse {
     color: $outer-space;
+  }
+
+  &--bottom-indent {
+    margin-bottom: 1.6em;
   }
 }
