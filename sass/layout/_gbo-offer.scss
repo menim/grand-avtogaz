@@ -5,6 +5,8 @@
 
   &__description {
     margin-bottom: 7.5em;
+    position: relative;
+    z-index: 1;
   }
 
   &__form {
