@@ -7,6 +7,11 @@
     margin-bottom: 7.5em;
   }
 
+  &__form {
+    position: relative;
+    z-index: 1;
+  }
+
   &::after,
   &::before {
     content: '';
