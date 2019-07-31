@@ -5,6 +5,10 @@
   background-size: cover;
   background-position: 0 -100px;
 
+  &__menu {
+    text-align: right;
+  }
+
   &__address {
     font-size: 3.125rem;
     line-height: 1;
