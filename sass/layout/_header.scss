@@ -2,4 +2,8 @@
   background-image: url('../../img/header-bg.jpg');
   background-position-y: 100px;
   background-size: cover;
+
+  &__menu {
+    text-align: right;
+  }
 }
