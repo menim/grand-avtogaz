@@ -1,0 +1,14 @@
+.footer {
+  font-size: 1rem;
+  color: $white;
+  background-image: url('../../img/footer-bg.jpg');
+  background-size: cover;
+
+  &__address {
+    font-size: 3.125rem;
+    line-height: 1;
+    font-family: OpenSansBold;
+    font-style: normal;
+    padding: 2.3em 0 7.2em;
+  }
+}
