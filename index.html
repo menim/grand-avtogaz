@@ -38,12 +38,12 @@
                 <use xlink:href="#logo">
               </svg>
               <span class="logo__description">
-                Мультибрендовый магазин ГБО на ЛОСКе <br />
+                Мультибрендовый магазин ГБО на ЛОСКе<br/>
                 Харьков, ЛОСК, Восточная сторона, магазин 5-А
               </span>
             </a>
-            <nav class="nav">
-              <ul class="menu">
+            <nav class="nav offset-lg-1 col-lg-5">
+              <ul class="header__menu menu">
                 <li class="menu__item">
                   <a class="link" href="http://">Оборудование</a>
                 </li>
@@ -68,7 +68,7 @@
       <section class="gbo-brands">
         <div class="container container-vs-pad">
           <div class="row">
-            <h2 class="headline headline--md headline--inverse">
+            <h2 class="headline headline--md headline--inverse headline--bottom-indent col-lg-12">
               ГБО ведущих брендов
             </h2>
           </div>
@@ -197,88 +197,95 @@
         </div>
       </section>
       <section class="our-command">
-        <div class="container">
+        <div class="container container-vs-pad">
           <div class="row">
-            <h2 class="headline headline--md col-lg-12">Команда магазина</h2>
+            <h2 class="headline headline--md headline--bottom-indent col-lg-10">Команда магазина</h2>
           </div>
           <div class="row">
-            <div class="description">
+            <div class="description our-command__description col-lg-12">
               <p class="paragraph">
                 Наш коллектив является главным условием качественной и
                 продуктивной работы. Мы постоянно совершенствуем уровень
                 профессиональный подготовки и следим за развитием газобаллонного
                 оборудования. Большой опыт и высокая квалификация наших
                 сотрудников, позволяет оперативно выполнять работу в самые
-                кротчайшие сроки. Мы гордимся нашими сотрудниками!
+                кротчайшие сроки.<br/> Мы гордимся нашими сотрудниками!
               </p>
             </div>
           </div>
           <div class="row">
-            <img class="col-sm-12" src="img/team-photo.jpg" alt="Команда нашего магазина" />
+            <img class="our-command__photo col-sm-12" src="img/team-photo.jpg" alt="Команда нашего магазина" />
           </div>
           <div class="row">
-            <div class="employee-card">
+            <div class="employee-card col-lg-4">
               <h3 class="employee-card__title">
                 Анастасия
                 <p class="employee-card__rank">Менеджер отдела продаж</p>
               </h3>
-              <img src="img/manager-photo.jpg" alt="Менеджео отдела продаж. Анастасия" />
+              <div class="description description--without-indent">
+                <img src="img/manager-photo.jpg" alt="Менеджео отдела продаж. Анастасия" />
+              </div>
             </div>
-            <div class="employee-card">
+            <div class="employee-card col-lg-4">
               <h3 class="employee-card__title">
                 Владимир
                 <p class="employee-card__rank">Менеджер склада/комплектовщик</p>
               </h3>
-              <img src="img/stock-manager-photo.jpg" alt="Менеджер склада/комплектовщик. Владимир" />
+              <div class="description description--without-indent">
+                <img src="img/stock-manager-photo.jpg" alt="Менеджер склада/комплектовщик. Владимир" />
+              </div>
             </div>
-            <div class="employee-card">
-              Роман
+            <div class="employee-card col-lg-4">
               <h3 class="employee-card__title">
+                Роман
                 <p class="employee-card__rank">Директор магазина</p>
               </h3>
-              <img src="img/director-photo.jpg" alt="Директор магазина. Роман" />
+              <div class="description description--without-indent">
+                <img src="img/director-photo.jpg" alt="Директор магазина. Роман" />
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="gbo-offer">
-        <div class="container">
+        <div class="container container-vs-pad">
           <div class="row">
-            <div class="description">
+            <div class="gbo-offer__description description description--dark description--lg-indent offset-lg-1 col-lg-11">
               <p class="paragraph paragraph--lg paragraph--inverse">
-                Для наших постоянных клиентов мы можем найти на рынке
-                <strong>абсолютно любые детали для ГБО</strong>, без
+                Для наших постоянных клиентов мы можем найти на рынке<br/>
+                <strong>абсолютно любые детали для ГБО</strong>,<br /> без
                 дополнительной оплаты
                 <strong>добавить к основному заказу.</strong>
               </p>
             </div>
           </div>
-          <div class="row">
-            <form class="form" action="">
-              <h3 class="headline headline--sm headline--inverse">Заказать обратный звонок</h3>
-              <label for="name">
-                <span></span>
-                <input name="name" type="text" placeholder="Имя" />
+            <form class="gbo-offer__form form row" action="">
+              <h3 class="headline headline--sm headline--inverse col-lg-12">Заказать обратный звонок</h3>
+              <label class="form__label col-lg-4" for="name">
+                <span class="sr-only">Имя:</span>
+                <input class="form__input" name="name" type="text" placeholder="Имя" />
               </label>
-              <label for="telephone">
-                <span></span>
-                <input name="telephone" type="text" placeholder="телефон" />
+              <label class="form__label col-lg-4" for="telephone">
+                <span class="sr-only">Телефон:</span>
+                <input class="form__input" name="telephone" type="text" placeholder="Телефон" />
               </label>
-              <button class="form__btn">Отправить</button>
+              <div class="col-lg-2">
+                <button class="form__btn">Отправить</button>
+              </div>
             </form>
-          </div>
+
         </div>
       </section>
-      <section class="delivery">
-        <div class="container">
+      <section class="gbo-delivery">
+        <div class="container container-vs-pad">
           <div class="row">
-            <h2 class="headline headline--md headline--inverse">
+            <h2 class="headline headline--md headline--inverse headline--bottom-indent">
               Удобная доставка
             </h2>
           </div>
           <div class="row">
-            <div class="description description--dark description--lg-indent">
-              <p class="paragraph">
+            <div class="gbo-delivery__description description offset-lg-1">
+              <p class="paragraph paragraph--inverse">
                 Если ты наш постоянный клиент мы не оставим тебя с проблемой
                 одного. Мы отправим почтой или автобусом любую деталь в любой
                 день недели БЕЗ ПЕРЕПЛАТ.
@@ -307,14 +314,15 @@
           </div>
         </div>
       </section>
-      <section class="questions">
+      <section class="gbo-questions">
         <div class="container container-vs-pad container-vs-pad--sm">
           <div class="row">
-            <div class="col-lg-7">
-              <h2 class="headline headline--md">Остались вопросы?
-                <span>
+            <div class="col-lg-11">
+              <h2 class="headline headline--md gbo-questions__headline">Остались вопросы?<br/>
+                <span class="headline__normal">
                   Звоните +38 097 009 00 44 <br />
-                  или приезжайте:
+                  или приезжайте: <br />
+                  ЛОСК, восточная сторона, магазин 5А
                 </span>
               </h2>
             </div>
@@ -325,7 +333,7 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <address class="address">
+          <address class="footer__address address">
             ЛОСК, восточная сторона, магазин 5А
           </address>
         </div>
@@ -333,17 +341,17 @@
       <div class="inner-wrapper">
         <div class="container">
           <div class="row align-items-center justify-content-between">
-            <a class="logo" href="">
+            <a class="logo col-lg-6" href="">
               <svg class="logo__img">
                 <use xlink:href="#logo">
               </svg>
               <span class="logo__description">
-                Мультибрендовый магазин ГБО на ЛОСКе <br />
+                Мультибрендовый магазин ГБО на ЛОСКе<br />
                 Харьков, ЛОСК, Восточная сторона, магазин 5-А
               </span>
             </a>
-            <nav class="nav">
-              <ul class="menu">
+            <nav class="nav offset-lg-1 col-lg-5">
+              <ul class="footer__menu menu">
                 <li class="menu__item">
                   <a class="link" href="http://">Оборудование</a>
                 </li>
