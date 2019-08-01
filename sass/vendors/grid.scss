@@ -11,25 +11,24 @@
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px
+  xs: 0,
+  xm: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
 ) !default;
-
 
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px,
 ) !default;
-
 
 // Grid columns
 //
@@ -40,11 +39,10 @@ $grid-gutter-width: 30px !default;
 
 // END of Grid Options
 
-
 // Bootstrap file imports
-@import "breakpoints/mixins/breakpoints";
-@import "grid/bootstrap-grid";
-@import "sizing/utilities/sizing";
-@import "layout/utilities/spacing";
-@import "layout/mixins/visibility";
-@import "layout/utilities/visibility";
+@import 'breakpoints/mixins/breakpoints';
+@import 'grid/bootstrap-grid';
+@import 'sizing/utilities/sizing';
+@import 'layout/utilities/spacing';
+@import 'layout/mixins/visibility';
+@import 'layout/utilities/visibility';
