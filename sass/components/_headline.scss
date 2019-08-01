@@ -27,7 +27,23 @@
   &--lg {
     font-size: 3.75rem;
     line-height: 1.22;
-    padding: 3em 0 3.083em;
+    margin: 3em 0 3.083em;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 3rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 2.5rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
+
+    @include media-breakpoint-down(xm) {
+      font-size: 1.5rem;
+    }
   }
 
   &--center {

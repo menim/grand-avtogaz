@@ -3,4 +3,11 @@
   align-items: center;
   height: 100px;
   background-color: $outer-space;
+
+  @include media-breakpoint-down(xm) {
+    & {
+      height: auto;
+      padding: 1rem 0;
+    }
+  }
 }

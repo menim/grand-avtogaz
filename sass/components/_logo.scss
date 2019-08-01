@@ -12,4 +12,14 @@
     width: 210px;
     padding-right: 2.3em;
   }
+
+  @include media-breakpoint-down(sm) {
+    & {
+      font-size: 0.75em;
+    }
+
+    &__img {
+      width: 150px;
+    }
+  }
 }

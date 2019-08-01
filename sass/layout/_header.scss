@@ -5,4 +5,21 @@
   &__menu {
     text-align: right;
   }
+
+  @include media-breakpoint-down(md) {
+    &__logo {
+      margin: 0.5em 0;
+      justify-content: center;
+    }
+
+    &__menu {
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-down(xm) {
+    &__logo {
+      flex-wrap: wrap;
+    }
+  }
 }
