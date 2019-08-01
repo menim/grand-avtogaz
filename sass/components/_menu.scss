@@ -10,8 +10,8 @@
     color: $white;
     margin-left: 2.143em;
 
-    &::first-child {
-      margin-left: none;
+    &:first-child {
+      margin-left: 0;
     }
   }
 }
