@@ -5,4 +5,20 @@
   &--sm {
     padding: 6.5625em 0;
   }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 0.8rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 0.6rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 0.4rem;
+  }
+
+  @include media-breakpoint-down(xm) {
+    font-size: 0.2rem;
+  }
 }
