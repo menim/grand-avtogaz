@@ -5,6 +5,11 @@
   margin-top: 0;
   margin-bottom: 2.22em;
 
+  @include media-breakpoint-down(md) {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }

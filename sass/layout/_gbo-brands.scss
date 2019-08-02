@@ -3,6 +3,10 @@
 
   &__description {
     margin-bottom: 6.5625em;
+
+    @include media-breakpoint-down(md) {
+      font-size: 0.6rem;
+    }
   }
 
   &__item {
@@ -10,8 +14,32 @@
     align-self: center;
     margin-bottom: 5em;
 
+    @include media-breakpoint-down(xm) {
+      width: 50%;
+    }
+
     &:nth-last-child(-n + 4) {
       margin-bottom: 0;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 5em;
+      }
+    }
+
+    &:nth-last-child(-n + 2) {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 0;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 5em;
+      }
+    }
+
+    &:last-child {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+      }
     }
   }
 }

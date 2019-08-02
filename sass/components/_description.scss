@@ -3,6 +3,10 @@
   border-left: 0.5em solid $cinnabar;
   padding-left: 3.75em;
 
+  @include media-breakpoint-down(md) {
+    font-size: 0.5rem;
+  }
+
   &--dark {
     border-color: $outer-space;
   }

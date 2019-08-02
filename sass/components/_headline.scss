@@ -22,6 +22,18 @@
 
   &--md {
     font-size: 3.125rem;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 2.5rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 2rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
   }
 
   &--lg {
