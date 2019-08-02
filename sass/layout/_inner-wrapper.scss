@@ -5,9 +5,7 @@
   background-color: $outer-space;
 
   @include media-breakpoint-down(xm) {
-    & {
-      height: auto;
-      padding: 1rem 0;
-    }
+    height: auto;
+    padding: 1rem 0;
   }
 }
