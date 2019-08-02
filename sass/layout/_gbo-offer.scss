@@ -7,6 +7,10 @@
     margin-bottom: 7.5em;
     position: relative;
     z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 5em;
+    }
   }
 
   &__form {
@@ -26,12 +30,30 @@
   }
 
   &::before {
-    background: url('../../img/repair-1.png') no-repeat;
+    background-image: url('../../img/repair-1.png');
+    background-repeat: no-repeat;
     background-position: 0 3.75em;
+
+    @include media-breakpoint-down(md) {
+      background-size: 344px 402px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      background: none;
+    }
   }
 
   &::after {
-    background: url('../../img/repair-2.png') no-repeat;
+    background-image: url('../../img/repair-2.png');
+    background-repeat: no-repeat;
     background-position: 100% 11.875em;
+
+    @include media-breakpoint-down(md) {
+      background-size: 199px 221px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      background: none;
+    }
   }
 }

@@ -21,5 +21,23 @@
   &--lg {
     font-size: 3.0625rem;
     line-height: 1.4;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 2.8rem;
+      line-height: 1.3;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.8rem;
+    }
+
+    @include media-breakpoint-down(xm) {
+      font-size: 1.3rem;
+    }
   }
 }

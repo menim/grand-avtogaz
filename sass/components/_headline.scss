@@ -18,6 +18,18 @@
     font-size: 2.25rem;
     font-weight: normal;
     margin-bottom: 0.83em;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 2rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.75rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
   }
 
   &--md {

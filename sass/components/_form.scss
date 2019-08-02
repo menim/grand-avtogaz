@@ -2,6 +2,12 @@
   color: $outer-space;
   font-size: 1rem;
 
+  &__label {
+    @include media-breakpoint-down(sm) {
+      min-width: 100%;
+    }
+  }
+
   &__input {
     width: 100%;
     height: 3.125em;
@@ -9,6 +15,11 @@
     padding-left: 1.375em;
     border: 0;
     margin-right: 1.875em;
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+      margin-bottom: 2em;
+    }
 
     &:focus {
       border: 1px solid $outer-space;
@@ -32,6 +43,12 @@
       border: 1px solid $cinnabar;
       background-color: transparent;
       color: $cinnabar;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 1em;
+      width: 8.75em;
+      height: 3.125em;
     }
   }
 }
