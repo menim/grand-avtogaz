@@ -1,0 +1,20 @@
+.nav {
+  &__menu {
+    text-align: right;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    @include media-breakpoint-down(md) {
+      margin: 0.5em 0;
+      justify-content: center;
+    }
+
+    @include media-breakpoint-down(xm) {
+      flex-wrap: wrap;
+    }
+  }
+}
