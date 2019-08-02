@@ -1,9 +1,11 @@
 .container-vs-pad {
   font-size: 1rem;
-  padding: 10em 0;
+  padding-top: 10em;
+  padding-bottom: 10em;
 
   &--sm {
-    padding: 6.5625em 0;
+    padding-top: 6.5625em;
+    padding-bottom: 6.5625em;
   }
 
   @include media-breakpoint-down(lg) {
