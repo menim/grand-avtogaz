@@ -1,12 +1,9 @@
 .footer {
   color: $white;
   background-image: url('../../img/footer-bg.jpg');
+  font-size: 3.125rem;
 
-  &__address {
-    font-size: 3.125rem;
-    line-height: 1.2;
-    font-family: OpenSansBold;
-    font-style: normal;
+  &__bg {
     padding-top: 2.3em;
     padding-bottom: 7.2em;
 
@@ -21,5 +18,12 @@
     @include media-breakpoint-down(sm) {
       font-size: 1.75em;
     }
+  }
+
+  &__address {
+    font-size: 3.125rem;
+    line-height: 1.2;
+    font-family: OpenSansBold;
+    font-style: normal;
   }
 }
