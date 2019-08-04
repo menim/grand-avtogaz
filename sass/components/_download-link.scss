@@ -1,0 +1,27 @@
+.download-link {
+  color: $outer-space;
+  text-align: center;
+  font-size: 1.25rem;
+  text-decoration: none;
+  margin: 0 auto;
+
+  &__icon {
+    display: block;
+    margin: 0 auto 1.5em;
+    transition: fill 150ms ease-in;
+  }
+
+  &__text {
+    transition: color 150ms ease-in;
+  }
+
+  &:hover {
+    .download-link__icon {
+      fill: $cinnabar;
+    }
+
+    .download-link__text {
+      color: $cinnabar;
+    }
+  }
+}
