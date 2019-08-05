@@ -1,0 +1,20 @@
+.mini-employee-card {
+  border-left: 12px solid $cinnabar;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.07);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding-left: 1.625em;
+
+  &__descript {
+    display: flex;
+    align-items: center;
+    font-size: 0.75em;
+    font-family: OpenSansBold;
+    line-height: 1.666;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 1.5em;
+  }
+}

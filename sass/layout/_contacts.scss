@@ -1,0 +1,18 @@
+.contacts {
+  font-size: 1rem;
+
+  &__headline {
+    margin-bottom: 1.2em;
+  }
+
+  &__description {
+    font-size: 0.75em;
+    font-style: normal;
+    line-height: 1.666;
+    margin-bottom: 4.1666em;
+  }
+
+  &__map {
+    margin-bottom: 4.375em;
+  }
+}
