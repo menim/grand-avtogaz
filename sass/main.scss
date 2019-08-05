@@ -1,8 +1,9 @@
-@import 'abstracts/mixins', 'abstracts/variables', 'abstracts/sprite',
-  'base/normalize', 'base/general', 'vendors/grid.scss', 'components/logo',
+@import 'vendors/grid.scss', 'abstracts/mixins', 'abstracts/variables',
+  'abstracts/sprite', 'base/normalize', 'base/general', 'components/logo',
   'components/menu', 'components/link', 'components/headline',
   'components/description', 'components/paragraph', 'components/employee-card',
-  'components/form', 'components/download-link', 'layout/inner-wrapper',
-  'layout/header', 'layout/nav', 'layout/container-vs-pad', 'layout/gbo-brands',
-  'layout/our-command', 'layout/gbo-offer', 'layout/gbo-delivery',
-  'layout/gbo-questions', 'layout/equip-download', 'layout/footer';
+  'components/form', 'components/download-link', 'components/equipment',
+  'layout/inner-wrapper', 'layout/header', 'layout/nav',
+  'layout/container-vs-pad', 'layout/gbo-brands', 'layout/our-command',
+  'layout/gbo-offer', 'layout/gbo-delivery', 'layout/gbo-questions',
+  'layout/equip-download', 'layout/gbo-equipments', 'layout/footer';

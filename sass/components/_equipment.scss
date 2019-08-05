@@ -1,0 +1,95 @@
+.equipment {
+  font-size: 1rem;
+  border: 1px solid $cinnabar;
+  margin-bottom: 2.1875em;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 0.95rem;
+  }
+
+  &__top {
+    display: flex;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  &__descript {
+    margin-top: 1.875em;
+  }
+
+  &__title {
+    font-size: 1.25em;
+    font-family: OpenSans;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+  }
+
+  &__subtitle {
+    color: $cinnabar;
+    display: block;
+    font-size: 1.4em;
+    font-family: OpenSansBold;
+    margin-top: 0.4285em;
+  }
+
+  &__btn {
+    color: $cinnabar;
+    background-color: $white;
+    border: 1px solid currentColor;
+    border-radius: 1.125em;
+    font-size: 0.9375em;
+    padding: 0.5em 1em 0.5em 2.5333em;
+    position: relative;
+    transition: background-color 150ms ease-in, color 150ms ease-in;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 0.5333em;
+      width: 0.5333em;
+      border-left: 1px solid $cinnabar;
+      border-bottom: 1px solid $cinnabar;
+      position: absolute;
+      top: 0.69em;
+      left: 1.01em;
+      transform: rotateZ(-45deg);
+      transition: transform 300ms ease-in, border-color 150ms ease-in;
+    }
+
+    &:hover {
+      background-color: $cinnabar;
+      color: $white;
+    }
+
+    &:hover::after {
+      border-color: $white;
+    }
+  }
+
+  &__bottom {
+    padding: 0 1.25em 1.25em;
+  }
+
+  &__firms-generation {
+    font-family: OpenSansBold;
+    line-height: 1.4375;
+    margin: 0;
+  }
+
+  &__firms-list {
+    margin-bottom: 1.5625em;
+    margin-top: 0;
+    padding-left: 0;
+
+    &:last-child {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__firm {
+    list-style-type: none;
+    line-height: 1.4375;
+  }
+}

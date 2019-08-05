@@ -14,6 +14,11 @@
 .svg--equipment {
   width: 165px;
   height: 165px;
+
+  @include media-breakpoint-down(lg) {
+    width: 125px;
+    height: 125px;
+  }
 }
 
 .svg--form-arrow-download {
