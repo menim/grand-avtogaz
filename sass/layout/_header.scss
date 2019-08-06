@@ -6,8 +6,12 @@
     background-image: url('../../img/header-bg-no-shadow.jpg');
     min-height: 725px;
 
+    @include media-breakpoint-down(lg) {
+      background-position: -250px 100px;
+    }
+
     @include media-breakpoint-down(md) {
-      background-position: -500px 100px;
+      background-position: -350px 100px;
     }
 
     @include media-breakpoint-down(sm) {
