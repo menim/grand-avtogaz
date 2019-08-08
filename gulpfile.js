@@ -195,15 +195,19 @@ gulp.task ('prefix', function () {
         cascade: false,
       })
     )
-    .pipe (gulp.dest ('app/css'));
+    .pipe (gulp.dest ('dist/css'));
 });
 
 gulp.task ('clean:dist', function () {
   return del.sync ('dist');
 });
 
-gulp.task ('fonts', function () {
-  return gulp.task ('fonts/**/*').pipe (gulp.dest ('dist/fonts'));
+gulp.task ('fontsToDist', function () {
+  return gulp.src ('fonts/*.+(woff|woff2)').pipe (gulp.dest ('dist/fonts'));
+});
+
+gulp.task ('imgToDist', function () {
+  return gulp.src ('img/**/**/*.+(png|jpg|svg)').pipe (gulp.dest ('dist/img'));
 });
 
 gulp.task ('images', function () {
@@ -224,8 +228,15 @@ gulp.task ('useref', function () {
     .src ('*.html')
     .pipe (useref ())
     .pipe (gulpIf ('*.js', uglify ()))
-    .pipe (gulpIf ('*.css', cssnano ()))
+    .pipe (gulpIf ('css/**/**/*.css', cssnano ()))
     .pipe (gulp.dest ('dist'));
+});
+
+gulp.task ('cssminify', function () {
+  return gulp
+    .src ('dist/css/*.css')
+    .pipe (cssnano ())
+    .pipe (gulp.dest ('dist/css'));
 });
 
 gulp.task ('browserSync', function () {
@@ -257,7 +268,7 @@ gulp.task ('watch', ['browserSync', 'sass'], function () {
 gulp.task ('build', function (callback) {
   runSequence (
     'clean:dist',
-    ['sass', 'prefix', 'useref', 'images', 'fonts'],
+    ['imgToDist', 'fontsToDist', 'sass', 'prefix', 'useref', 'cssminify'],
     callback
   );
 });
