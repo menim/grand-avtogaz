@@ -52,8 +52,9 @@
       border-left: 1px solid $cinnabar;
       border-bottom: 1px solid $cinnabar;
       position: absolute;
-      top: 0.69em;
-      left: 1.01em;
+      top: 0.67em;
+      left: 1.1em;
+      transform-origin: center 0.399975em;
       transform: rotateZ(-45deg);
       transition: transform 300ms ease-in, border-color 150ms ease-in;
     }
@@ -66,10 +67,26 @@
     &:hover::after {
       border-color: $white;
     }
+
+    &--is-active {
+      &::after {
+        transform: rotateZ(135deg);
+        transform-origin: center 0.399975em;
+      }
+    }
   }
 
   &__bottom {
     padding: 0 1.25em 1.25em;
+    overflow: hidden;
+    max-height: 0;
+    padding-bottom: 0;
+    transition: max-height 300ms ease-in-out, padding-bottom 300ms ease-in-out;
+
+    &--is-show {
+      max-height: 300px;
+      padding-bottom: 1.25em;
+    }
   }
 
   &__firms-generation {
