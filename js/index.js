@@ -3,12 +3,15 @@
     document.querySelectorAll ('.equipment__btn')
   );
 
+  function toggleEquipment (e) {
+    this.classList.toggle ('equipment__btn--is-active');
+    console.log (this.parentNode.parentNode.nextElementSibling);
+    this.parentNode.parentNode.nextElementSibling.classList.toggle (
+      'equipment__bottom--is-show'
+    );
+  }
+
   equipmentListBtns.forEach (function (equipmentBtn) {
-    equipmentBtn.addEventListener ('click', function () {
-      equipmentBtn.classList.toggle ('equipment__btn--is-active');
-      equipmentBtn.parentNode.parentNode.nextSibling.nextSibling.classList.toggle (
-        'equipment__bottom--is-show'
-      );
-    });
+    equipmentBtn.addEventListener ('click', toggleEquipment);
   });
 }) ();
