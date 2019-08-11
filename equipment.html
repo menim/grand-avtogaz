@@ -351,7 +351,7 @@
           <h2 class="headline headline--md headline--inverse headline--center headline--bottom-indent col-lg-12">
             Полный список оборудования:
           </h2>
-          <a href="#" class="download-link">
+          <a href="#modal" class="download-link">
             <svg class="svg svg--arrow-downlaod download-link__icon">
               <use xlink:href="img/svg/symbol/sprite.svg#arrow-downlaod"></use>
             </svg>
@@ -416,19 +416,22 @@
         </div>
       </div>
     </footer>
-    <!-- <div class="modal">
-      <form class="form-secondary" action="https://formsubmit.co/mel198629@gmail.com" method="POST">
-        <h2 class="form-secondary__headline">Оставьте номер телефона,
-          для&nbsp;начала загрузки каталога</h2>
-        <label class="form-secondary__label" for="telephone-secondary">Телефон:</label>
-        <input class="form-secondary__input" name="telephone-secondary" type="text" />
-        <input type="text" name="_honey" style="display:none">
-        <input type="hidden" name="_next" value="/">
-        <button class="form-secondary__btn"><svg class="form-secondary__load-icon">
-          <use xlink:href="img/svg/symbol/sprite.svg#arrow-downlaod"></use>
-        </svg>Скачать каталог</button>
-      </form>
-    </div> -->
+    <div id="modal" class="modal" role="dialog">
+      <div class="modal__overlay"></div>
+      <div class="modal__wrapper">
+        <form class="modal__form form-secondary" action="https://formsubmit.co/mel198629@gmail.com" method="POST">
+          <h2 class="form-secondary__headline">Оставьте номер телефона,
+            для&nbsp;начала загрузки каталога</h2>
+          <label class="form-secondary__label" for="telephone-secondary">Телефон:</label>
+          <input class="form-secondary__input" name="telephone-secondary" type="text" />
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_next" value="/">
+          <button class="form-secondary__btn"><svg class="form-secondary__load-icon">
+            <use xlink:href="img/svg/symbol/sprite.svg#arrow-downlaod"></use>
+          </svg>Скачать каталог</button>
+        </form>
+      </div>
+    </div>
   <script src="js/index.js"></script>
   </body>
 </html>
