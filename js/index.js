@@ -1,24 +1,32 @@
 (function() {
-  //show hide equipment description feature
-  let equipmentListBtns = Array.prototype.slice.call(
-    document.querySelectorAll('.equipment__btn')
-  );
+  'use strict';
 
-  function toggleEquipment(e) {
-    this.classList.toggle('equipment__btn--is-active');
-    this.parentNode.parentNode.nextElementSibling.classList.toggle(
-      'equipment__bottom--is-show'
+  //show hide equipment item info
+  function showEquipmentInfo() {
+    var equipmentListBtns = Array.prototype.slice.call(
+      document.querySelectorAll('.equipment__btn')
     );
+
+    function toggleEquipment(e) {
+      this.classList.toggle('equipment__btn--is-active');
+      this.parentNode.parentNode.nextElementSibling.classList.toggle(
+        'equipment__bottom--is-show'
+      );
+    }
+
+    equipmentListBtns.forEach(function(equipmentBtn) {
+      equipmentBtn.addEventListener('click', toggleEquipment);
+    });
   }
 
-  equipmentListBtns.forEach(function(equipmentBtn) {
-    equipmentBtn.addEventListener('click', toggleEquipment);
-  });
-
-  //modal window feature
-  function openModal() {
+  // toggle modal with form
+  function toggleModal() {
     var modalLink = document.querySelector('.download-link');
-    modalLink.addEventListener('click', function(event) {
+    var modalOverlay = document.querySelector('.modal__overlay');
+    var wrapperHtml = document.getElementsByTagName('html');
+    var wrapperBody = document.body;
+
+    modalLink.addEventListener('click', function(e) {
       // remove "#" from #modal
       var target = this.getAttribute('href').substr(1);
 
@@ -27,29 +35,32 @@
 
       if (modalWindow.classList) {
         modalWindow.classList.add('open');
+        wrapperBody.style.overflow = 'hidden';
+        wrapperBody.style.height = '100%';
       }
-
-      event.preventDefault();
+      e.preventDefault();
     });
-  }
 
-  function closeModal() {
-    var modalOverlay = document.querySelector('.modal__overlay');
-    modalOverlay.addEventListener('click', function(event) {
+    modalOverlay.addEventListener('click', function(e) {
       // target the whole modal
       var modalWindow = this.parentNode;
       modalWindow.classList.remove('open');
+      wrapperBody.style.overflow = 'auto';
     });
   }
 
-  openModal();
-  closeModal();
-
-  //form validation feature
-
+  //form validation
   var regEx = {
     telephone: /^\+?3?8?(0[5-9][0-9]\d{7})$/,
     name: /^[A-Za-zА-Яа-я]{3,10}$/,
+  };
+
+  var errorsMsg = {
+    invalidTelephone: 'Вы ввели неправильный телефон',
+    invalidName: 'Вы ввели неправильное имя',
+    emptyField: 'Заполните пожалуйтса поле',
+    exceedMax: 'Очень длинное имя',
+    exceedMin: 'Очень короткое имя',
   };
 
   var isEmpty = function(value) {
@@ -71,16 +82,6 @@
   var checkTelephone = function(input) {
     return !isEmpty(input.value) && isTelephoneValid(input.value);
   };
-
-  function formValidate(formClass) {
-    var errorMessages = [];
-    var targetForm = document.querySelector(formClass);
-    var formSubmit = targetForm.querySelector('button');
-    var formInputs = targetForm.querySelector(formClass + '__input');
-
-    formSubmit.addEventListener('submit', function() {});
-  }
-  formValidate('.form');
 
   function validateTelephoneForm() {
     var formTarget = document.querySelector('.form-secondary');
@@ -121,5 +122,16 @@
     });
   }
 
+  function validateForm(formClass) {
+    var targetForm = document.querySelector(formClass);
+    var formSubmit = targetForm.querySelector('button');
+    var formInputs = targetForm.querySelector(formClass + '__input');
+
+    formSubmit.addEventListener('submit', function() {});
+  }
+  validateForm('.form');
+
+  showEquipmentInfo();
+  toggleModal();
   validateTelephoneForm();
 })();
