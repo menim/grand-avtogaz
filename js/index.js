@@ -1,6 +1,55 @@
 (function() {
   'use strict';
 
+  // fix body scrolling when body overflow equal hidden in safari browsers
+  function bodyLock() {
+    var _overlay = document.querySelector('.modal__overlay');
+    var _clientY = null; // remember Y position on touch start
+
+    _overlay.addEventListener(
+      'touchstart',
+      function(e) {
+        if (e.targetTouches.length === 1) {
+          // detect single touch
+          _clientY = e.targetTouches[0].clientY;
+        }
+      },
+      false
+    );
+
+    _overlay.addEventListener(
+      'touchmove',
+      function(e) {
+        if (e.targetTouches.length === 1) {
+          // detect single touch
+          disableRubberBand(e);
+        }
+      },
+      false
+    );
+
+    function disableRubberBand(e) {
+      var clientY = e.targetTouches[0].clientY - _clientY;
+
+      if (_overlay.scrollTop === 0 && clientY > 0) {
+        // element is at the top of its scroll
+        e.preventDefault();
+      }
+
+      if (isOverlayTotallyScrolled() && clientY < 0) {
+        //element is at the top of its scroll
+        e.preventDefault();
+      }
+    }
+
+    function isOverlayTotallyScrolled() {
+      // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
+      return (
+        _overlay.scrollHeight - _overlay.scrollTop <= _overlay.clientHeight
+      );
+    }
+  }
+
   //show hide equipment item info
   function showEquipmentInfo() {
     var equipmentListBtns = Array.prototype.slice.call(
@@ -131,6 +180,7 @@
   }
   validateForm('.form');
 
+  bodyLock();
   showEquipmentInfo();
   toggleModal();
   validateTelephoneForm();
